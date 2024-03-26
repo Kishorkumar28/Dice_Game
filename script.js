@@ -56,7 +56,7 @@ const rollTheDice=()=>{
 
     setTimeout(()=>{
     diceImg.setAttribute("src",`./images/${randomNum}.png`)
-    },800)
+    },850)
     if(data.currentPlayer == 1 ){
        data.playeroneScore+=randomNum;
        playerOneScoreSpan.innerText=data.playeroneScore;

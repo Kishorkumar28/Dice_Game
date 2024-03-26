@@ -1,9 +1,17 @@
 .header{
+    font-family: "Arial", sans-serif;
     display:flex;
     justify-content: center;
     align-items: center;
-    color: rgb(40, 156, 50);
+    color: rgb(87, 201, 97);
 }
+    #header-2{
+        font-family: "Arial", sans-serif;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(255, 187, 0)
+    }
 .game-area{
     display: flex;
     justify-content: space-evenly;
