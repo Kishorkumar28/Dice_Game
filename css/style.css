@@ -32,10 +32,17 @@
     justify-content: center;
     border-radius: 15px;
     background-color: rgb(42, 221, 42);
-    border: solid  rgb(42, 221, 42) 3.5px;
+    border: none !important;
+    padding: 10px 30px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 .roll_now:disabled {
-    cursor: wait;
+    cursor: not-allowed;
+    background-color: rgb(149, 148, 148);
+}
+
+.roll_now:active{
+    background-color: rgb(34, 123, 34);
 }
 .player{
     font-weight: bolder;
@@ -56,9 +63,19 @@
     height: 50px;
     width:150px;
     border-radius: 15px;
-    border: solid  rgb(253, 93, 93) 3.5px;
+    border: none;
     margin-bottom: 230px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
+
+#reset-btn:disabled {
+    background-color: rgb(149, 148, 148);
+    cursor: not-allowed;
+}
+}
+
+#dice-img{
+    height: 300px;
 }
 
 

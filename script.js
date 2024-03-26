@@ -45,18 +45,17 @@ const startGame=()=>{
     
 }
 
-
 const rollTheDice=()=>{
-    const randomNum=Math.ceil(Math.random() *6 )
-    for (let i = 1; i <= 6; i++) {
-        setTimeout(() => {
-            diceImg.setAttribute("src", `./images/${i}.png`);
-        }, i * 100);
-    }
-
+    const intervalId = setInterval(()=>{
+        const randomNum=Math.ceil(Math.random() *6 );
+        diceImg.setAttribute("src", `./images/${randomNum}.png`);
+        }, 100);
+    
     setTimeout(()=>{
+    clearInterval(intervalId);
+    const randomNum=Math.ceil(Math.random() *6 )
     diceImg.setAttribute("src",`./images/${randomNum}.png`)
-    },850)
+    
     if(data.currentPlayer == 1 ){
        data.playeroneScore+=randomNum;
        playerOneScoreSpan.innerText=data.playeroneScore;
@@ -64,12 +63,13 @@ const rollTheDice=()=>{
          data.playerTwoScore += randomNum;
          playerTwoScoreSpan.innerText = data.playerTwoScore;
      }
-
+    },1000)
 }
 
 playerOneButton.addEventListener("click",()=>{
     console.log("P-1 button clicked");
     rollTheDice();
+    setTimeout(()=>{
     if(data.playeroneScore >=30){
         setTimeout(()=>alert("Player 1 Wins"),1000)
         resetButton.classList.remove("disabled")
@@ -79,6 +79,7 @@ playerOneButton.addEventListener("click",()=>{
     else{
     setCurrentPlayer(2)
     }
+},1000)
 })
 
 
@@ -86,6 +87,7 @@ playerOneButton.addEventListener("click",()=>{
 playerTwoButton.addEventListener("click",()=>{
     console.log("P-2 button clicked");
     rollTheDice();
+    setTimeout(()=>{
     if(data.playerTwoScore >=30){
         setTimeout(()=>alert("Player 2 Wins"),1000)
         resetButton.classList.remove("disabled")
@@ -95,6 +97,7 @@ playerTwoButton.addEventListener("click",()=>{
     else{
     setCurrentPlayer(1)
     }
+    },1000)
 })
 
 resetButton.addEventListener("click",()=>{
