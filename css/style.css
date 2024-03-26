@@ -26,6 +26,9 @@
     background-color: rgb(42, 221, 42);
     border: solid  rgb(42, 221, 42) 3.5px;
 }
+.roll_now:disabled {
+    cursor: wait;
+}
 .player{
     font-weight: bolder;
     display: flex;

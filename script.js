@@ -32,6 +32,7 @@ const setCurrentPlayer=(playerNum)=>{
 
 
 const startGame=()=>{
+    diceImg.setAttribute("src", `./images/dice.png`);
     setCurrentPlayer(data.currentPlayer=Math.ceil(Math.random()*2));
     data.playeroneScore=0;
     data.playerTwoScore=0;
