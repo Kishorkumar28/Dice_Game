@@ -44,6 +44,10 @@
 .roll_now:active{
     background-color: rgb(34, 123, 34);
 }
+.roll_now:hover:not([disabled]) {
+    background-color: rgb(255, 187, 0);
+}
+
 .player{
     font-weight: bolder;
     display: flex;
